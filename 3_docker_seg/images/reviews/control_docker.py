@@ -14,7 +14,7 @@ if not len(sys.argv) < 2:
 
 
 if segundo_argumento == "create":
-    chdir('docker-compose/reviews')
+    chdir('images/reviews')
 
 call(["cp","-r","../../practica_creativa2/bookinfo/src/reviews","."])
 

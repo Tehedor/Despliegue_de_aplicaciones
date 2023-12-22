@@ -9,7 +9,7 @@ if not len(sys.argv) < 2:
 
 
 if segundo_argumento == "create":
-    chdir('docker-compose/ratings')
+    chdir('images/ratings')
 
 varibaleGroup =  str(environ.get('GRUPO_NUMERO')).lower()
 # varibaleGroup =  environ.get('GRUPO_NUMERO')

@@ -10,7 +10,7 @@ if not len(sys.argv) < 2:
 
 
 if segundo_argumento == "create":
-    chdir('docker-compose/productPage_seg')
+    chdir('images/productPage_seg')
 
 varibaleGroup =  environ.get('GRUPO_NUMERO')
 
