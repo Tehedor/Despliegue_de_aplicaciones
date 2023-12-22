@@ -71,4 +71,4 @@ varibaleGroup =  environ.get('GRUPO_NUMERO')
 # Hacer que el script de docker/control_docker.py se ejecute dentro del directorio docker, no desde donde me encuentro ahora
 
 
-call(["sudo","docker","run","-d","--name","productpage:mono","-p","9080:9080", varibaleGroup + "/productpage:mono" ]) 
+call(["sudo","docker","run","-d","--name","productpage-mono","-p","9080:9080", varibaleGroup + "/productpage:mono" ]) 

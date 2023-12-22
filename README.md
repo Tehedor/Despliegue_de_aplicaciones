@@ -48,7 +48,7 @@ python3 script_docker.py
 
 ## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
 ```
-cd 3_docker_sef
+cd 3_docker_seg
 ```
 ```
 cd images/reviews/reviews
