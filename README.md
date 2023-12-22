@@ -94,6 +94,7 @@ Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 python3 control_coker-compose.py 
 ```
 + Otros comandos
+
 Eliminar contenedores
 ```
 python3 control_coker-compose.py eliminar_contenedores
@@ -133,6 +134,7 @@ python3 control_coker-compose.py
 ```
 
 + Otros comandos
+
 Eliminar contenedores
 ```
 python3 control_coker-compose.py eliminar_contenedores
