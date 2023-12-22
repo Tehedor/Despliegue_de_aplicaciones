@@ -17,6 +17,9 @@ python3 iniciar.py
 
 
 ## 1. Despliegue de la aplicación en máquina virtual pesada (2 puntos)
+```
+cd 1_mv_pesada
+```
 1. Actualizamos con:
 ```
 python3 script_m_pesada.py configurar
@@ -30,8 +33,12 @@ python3 script_m_pesada.py
 
 ## 2. Despliegue de una aplicación monolítica usando docker (2 puntos).
 
-## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
+```
+cd 2_docker_mono
+```
 
+
+## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
 ```
 cd 3_docker_sef
 ```
@@ -60,8 +67,13 @@ python3 control_coker-compose.py
 
 ## 3.5 Opcional. Docker Compose con las imagenes en la nube
 
-
+```
+cd 3.5_docker_nube
+```
 
 ## 4. Despliegue de una aplicación basada en microservicios utilizando Kubernetes (4 puntos)
+```
+cd 4_kubernetes
+```
 
 ## 4.5 Opcional, Helm Charts
