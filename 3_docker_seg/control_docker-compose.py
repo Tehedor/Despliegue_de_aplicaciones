@@ -80,4 +80,4 @@ call(["python3","control_env.py"])
 call(["sudo","docker-compose","up","-d"])
 
 # call(["sudo","docker-compose","up","-d"])
-print("export GRUPO_NUMERO=" + environ.get('GRUPO_NUMERO'))
+print("export SERVICE_VERSION=" + environ.get('SERVICE_VERSION'))
