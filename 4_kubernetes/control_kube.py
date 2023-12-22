@@ -13,6 +13,7 @@ if segundo_argumento == "elminar_pods":
 # Maquina pesada
 call(["kubectl","apply","-f","details.yaml"])
 call(["kubectl","apply","-f","productpage.yaml"])
+call(["kubectl","apply","-f","ratings.yaml"])
 call(["kubectl","apply","-f","reviews-svc.yaml"])
 call(["kubectl","apply","-f","reviews-v1-deployment.yaml"])
 call(["kubectl","apply","-f","reviews-v2-deployment.yaml"])
