@@ -50,31 +50,58 @@ python3 script_docker.py
 ```
 cd 3_docker_seg
 ```
+1. Crearemos las imagenes de details, productpage y ratings 
 ```
 python3 control_docker-compose.py images
 
 ```
+2. Crearemos la imagen y el contenedor de gradle manualmente para luego poder crear las imagenes de reviews 
 ```
 cd images/reviews/reviews
 ```
 ```
 sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
 ```
-
 ```
 cd ../../..
 ```
 
-Para crear las imagenes que va a utilizar el docker-compose
+3. Crearemos todas las versiones de reviews con este comando
 ```
 python3 control_docker-compose.py reviews
 ```
 
-Para ejecutar el docker-compose
+4. Para ejecutar el docker-compose
 ```
 python3 control_coker-compose.py 
 ```
 
++ Cambiar de versiones de reviews
+v1
+```
+export SERVICE_VERSION=v1 
+```
+v2
+```
+export SERVICE_VERSION=v2
+```
+v3
+```
+export SERVICE_VERSION=v3 
+```
+Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
+```
+python3 control_coker-compose.py 
+```
+- Otro comandos
+Eliminar contenedores
+```
+python3 control_coker-compose.py eliminar_contenedores
+```
+Eliminar todo
+```
+python3 control_coker-compose.py eliminar_todo
+```
 
 
 ## 3.5 Opcional. Docker Compose con las imagenes en la nube
@@ -82,6 +109,39 @@ python3 control_coker-compose.py
 ```
 cd 3.5_docker_nube
 ```
+1. Ejecutaremos directamente el docker-compose, ya que las imagenes sen encuentran en la nube
+```
+python3 control_coker-compose.py 
+```
+
++ Cambiar de versiones de reviews
+v1
+```
+export SERVICE_VERSION=v1 
+```
+v2
+```
+export SERVICE_VERSION=v2
+```
+v3
+```
+export SERVICE_VERSION=v3 
+```
+Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
+```
+python3 control_coker-compose.py 
+```
+
+- Otro comandos
+Eliminar contenedores
+```
+python3 control_coker-compose.py eliminar_contenedores
+```
+Eliminar todo
+```
+python3 control_coker-compose.py eliminar_todo
+```
+
 
 ## 4. Despliegue de una aplicación basada en microservicios utilizando Kubernetes (4 puntos)
 ```

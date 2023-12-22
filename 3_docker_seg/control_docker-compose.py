@@ -23,7 +23,7 @@ if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
 
 
-if segundo_argumento == "resetear_contendores":
+if segundo_argumento == "eliminar_contendores":
 
     # Get the IDs of all containers
     container_ids = check_output(["sudo", "docker", "ps", "-a", "-q"])
@@ -46,7 +46,7 @@ if segundo_argumento == "reviews":
     call(["python3","images/reviews/control_docker.py","create"])
     exit(0)
 
-if segundo_argumento == "resetear_todo":
+if segundo_argumento == "eliminar_todo":
 
     # Get the IDs of all containers
     container_ids = check_output(["sudo", "docker", "ps", "-a", "-q"])
@@ -75,7 +75,7 @@ if segundo_argumento == "resetear_todo":
 
     exit(0)
 
-call(["python3","control_env.py"])
+call(["python3","env.py"])
 
 call(["sudo","docker-compose","up","-d"])
 
