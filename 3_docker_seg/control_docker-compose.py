@@ -1,5 +1,5 @@
 from os import environ,path,sys
-from subprocess import call,run
+from subprocess import call,run,check_output
 import os
 import getpass
 
