@@ -2,9 +2,9 @@ from os import environ,path,sys
 from subprocess import call,run
 import os
 
-call(["cp","../practica_creativa2/bookinfo/src/productpage/requirements.txt","../practica_creativa2/bookinfo/src/productpage/requirements_copia.txt"])
-copia = open("../practica_creativa2/bookinfo/src/productpage/requirements_copia.txt","r")
-file = open("../practica_creativa2/bookinfo/src/productpage/requirements.txt" ,"w")
+call(["cp","./practica_creativa2/bookinfo/src/productpage/requirements.txt","./practica_creativa2/bookinfo/src/productpage/requirements_copia.txt"])
+copia = open("./practica_creativa2/bookinfo/src/productpage/requirements_copia.txt","r")
+file = open("./practica_creativa2/bookinfo/src/productpage/requirements.txt" ,"w")
 
 end = 1
 for line in copia:
@@ -27,4 +27,4 @@ if end:
 
 file.close()
 copia.close()
-call(["rm","../practica_creativa2/bookinfo/src/productpage/requirements_copia.txt"])
+call(["rm","./practica_creativa2/bookinfo/src/productpage/requirements_copia.txt"])

@@ -10,10 +10,10 @@ with open('.env', 'w') as file:
     file.write("SERVICE_VERSION=" + serviceVersion + "\n")
     
 
-aaa = open(".env", "r")
-for linea in aaa.readlines():
+file = open(".env", "r")
+for linea in file.readlines():
     print(linea)
-aaa.close()
+file.close()
 
 # varibaleGroup =  environ.get('GRUPO_NUMERO')
 

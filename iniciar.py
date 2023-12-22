@@ -1,8 +1,8 @@
 from os import environ,path,sys,chdir
 from subprocess import call,run,check_output
 
-varibaleGroup =  str(environ.get('GRUPO_NUMERO'))
-serviceVersion =  str(environ.get('SERVICE_VERSION'))
+varibaleGroup =  environ.get('GRUPO_NUMERO')
+serviceVersion = environ.get('SERVICE_VERSION')
 
 
 if not varibaleGroup:
@@ -30,14 +30,16 @@ if not path.exists("./practica_creativa2"):
 
 
     # 1_mv_pesada
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada/"])
 
     # 2_docker_mono
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/productpage","./2_docker_nmono/productPage_mono/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./2_docker_mono/productPage_mono/"])
 
     # 3_docker_seg
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/details","./3_docker_seg/images/details/"])
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/productpage","./3_docker_seg/images/productPage_seg/"])
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/ratings","./3_docker_seg/images/ratings/"])
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/reviews","./3_docker_seg/images/reviews/"])
-    call(["cp","./practice/1_mv_pesada/script_m_pesada.py","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/details","./3_docker_seg/images/details/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./3_docker_seg/images/productPage_seg/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/ratings","./3_docker_seg/images/ratings/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/reviews","./3_docker_seg/images/reviews/"])
+    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada"])
+
+

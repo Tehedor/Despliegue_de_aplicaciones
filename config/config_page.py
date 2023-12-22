@@ -8,9 +8,10 @@ print(varibaleGroup)
 
 # Editar fichero productpage.py
 
-call(["cp","../practica_creativa2/bookinfo/src/productpage/templates/productpage.html","../practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html"])
-copia = open(",./practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html","r")
-file = open("../practica_creativa2/bookinfo/src/productpage/templates/productpage.html" ,"w")
+
+call(["cp","./practica_creativa2/bookinfo/src/productpage/templates/productpage.html","./practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html"])
+copia = open("./practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html","r")
+file = open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html" ,"w")
 
 for line in copia:
     if line.startswith('{% block title %}'):
@@ -20,4 +21,4 @@ for line in copia:
 
 file.close()
 copia.close()
-call(["rm","../practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html"])
+call(["rm","./practica_creativa2/bookinfo/src/productpage/templates/productpage_copy.html"])

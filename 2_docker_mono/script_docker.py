@@ -3,19 +3,11 @@ from subprocess import call,run,check_output
 import os
 
 
-if not path.exists("./practica_creativa2"):
-    # Instalar y actualizar todo lo necesario para que funcione la practica
-    call(["sudo","apt-get","update"])
-    call(["sudo","apt-get","install","python3","-y"])
-    call(["sudo","apt-get","install","python3-pip","-y"])
-    call(["sudo","apt-get","install","docker.io","-y"])
-    call(["sudo","apt-get","install","docker-compose","-y"])
+
+if not path.exists("./productPage_mono/productpage"):
+    call(["cp","-r","../practica_creativa2/bookinfo/src/productpage","./productPage_mono/"])     
 
 
-    # Configurar todo el directorio para que funcione de manera adecuda toda la practica
-    call(["git","clone","https://github.com/CDPS-ETSIT/practica_creativa2.git"])
-    call(["python3","config_requirements.py"])
-    call(["python3","config_page.py"])
 
 
 segundo_argumento = ""

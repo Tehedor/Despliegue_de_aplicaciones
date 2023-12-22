@@ -1,18 +1,19 @@
 from os import environ,path,sys,chdir
 from subprocess import call,run,check_output
 
+segundo_argumento = ""
 
+if not len(sys.argv) < 2:
+    segundo_argumento = sys.argv[1]
+
+if segundo_argumento == "resetear_podes":
+    call(["kubectl", "delete", "pods", "--all"])
+    exit(0)
 
 # Maquina pesada
-
-
-chmod
-
-
-kubectl apply -f 
-details.yaml
-productpage.yaml
-ratingsreviews-svc.yaml
-reviews-v1-deployment.yaml
-reviews-v2-deployment.yaml
-reviews-v3-deployment.yaml
+call(["kubectl","apply","-f","details.yaml"])
+call(["kubectl","apply","-f","productpage.yaml"])
+call(["kubectl","apply","-f","ratingsreviews-svc.yaml"])
+call(["kubectl","apply","-f","reviews-v1-deployment.yaml"])
+call(["kubectl","apply","-f","reviews-v2-deployment.yaml"])
+call(["kubectl","apply","-f","reviews-v3-deployment.yaml"])

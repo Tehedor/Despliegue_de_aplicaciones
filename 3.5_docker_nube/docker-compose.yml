@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   productpage:
-    image: ${GRUPO_NUMERO}/productpage:seg
+    image: stehedor/09_productpage:seg
     container_name: ${GRUPO_NUMERO}-productpage
     ports:
       - 9080:9080
@@ -13,13 +13,13 @@ services:
     volumes: 
       - v_productpage:/app
   details:
-    image: ${GRUPO_NUMERO}/details    
+    image: stehedor/09_details    
     container_name: ${GRUPO_NUMERO}-details
     volumes:
       - v_details:/opt/microservices
 
   reviews:
-    image: ${GRUPO_NUMERO}/reviews:${SERVICE_VERSION}
+    image: stehedor/09_reviews:${SERVICE_VERSION}
     container_name: ${GRUPO_NUMERO}-reviews
     depends_on:
       - ratings
@@ -27,7 +27,7 @@ services:
       - v_reviews:/opt
 
   ratings:
-    image: ${GRUPO_NUMERO}/ratings
+    image: stehedor/09_ratings
     container_name: ${GRUPO_NUMERO}-ratings
     volumes:
       - v_ratings:/opt/microservices
@@ -37,46 +37,3 @@ volumes:
   v_details:
   v_ratings:
   v_reviews:  
-
-# version: '3.7'
-# # version: '3.9'
-
-# services:
-
-#   productpage:
-#     image: ${GRUPO_NUMERO}/productpage:seg
-#     container_name: ${GRUPO_NUMERO}-productpage
-#     ports:
-#       - 9080:9080
-#     volumes: 
-#       - v_productpage:/app
-#     depends_on:
-#       - details
-#       - reviews
-  
-#   details:
-#     image: ${GRUPO_NUMERO}/details    
-#     container_name: ${GRUPO_NUMERO}-details
-#     volumes:
-#       - v_details:/opt/microservices
-
-#   reviews:
-#     image: ${GRUPO_NUMERO}/reviews:${SERVICE_VERSION}
-#     container_name: ${GRUPO_NUMERO}-reviews
-#     depends_on:
-#       - ratings
-#     volumes:
-#       - v_reviews:/opt
-
-#   ratings:
-#     image: ${GRUPO_NUMERO}/ratings
-#     container_name: ${GRUPO_NUMERO}-ratings
-#     volumes:
-#       - v_ratings:/opt/microservices
-
-# volumes:
-#   v_productpage:
-#   v_details:
-#   v_ratings:
-#   v_reviews:
-
