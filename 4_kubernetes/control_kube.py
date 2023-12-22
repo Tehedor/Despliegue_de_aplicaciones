@@ -7,6 +7,7 @@ if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
 
 if segundo_argumento == "elminar_pods":
+    call(["kubectl", "stop", "pods", "--all"])
     call(["kubectl", "delete", "pods", "--all"])
     exit(0)
 
