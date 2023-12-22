@@ -14,7 +14,7 @@ if not path.exists("./images/ratings/ratings"):
     call(["cp","-r","../practica_creativa2/bookinfo/src/ratings","./images/ratings/"])
 
 if not path.exists("./images/details/reviews"):
-    call(["cp","-r","../practica_creativa2/bookinfo/src/details","./images/reviews/"])
+    call(["cp","-r","../practica_creativa2/bookinfo/src/reviews","./images/reviews/"])
 
 
 
