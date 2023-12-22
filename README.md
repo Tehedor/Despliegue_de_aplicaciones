@@ -93,7 +93,7 @@ Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 ```
 python3 control_coker-compose.py 
 ```
-- Otro comandos
++ Otros comandos
 Eliminar contenedores
 ```
 python3 control_coker-compose.py eliminar_contenedores
@@ -132,7 +132,7 @@ Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 python3 control_coker-compose.py 
 ```
 
-- Otro comandos
++ Otros comandos
 Eliminar contenedores
 ```
 python3 control_coker-compose.py eliminar_contenedores
@@ -146,6 +146,14 @@ python3 control_coker-compose.py eliminar_todo
 ## 4. Despliegue de una aplicación basada en microservicios utilizando Kubernetes (4 puntos)
 ```
 cd 4_kubernetes
+```
+1. Crear los pods
+```
+python3 control_kube.py
+```
++ Elimnar todos los pods
+```
+python3 control_kube.py elminar_pods
 ```
 
 ## 4.5 Opcional, Helm Charts
