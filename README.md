@@ -36,7 +36,15 @@ python3 script_m_pesada.py
 ```
 cd 2_docker_mono
 ```
+1. Crear la imagen
+```
+python3 script_docker.py image
+```
 
+2. Arrancar el contendor
+```
+python3 script_docker.py
+```
 
 ## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
 ```

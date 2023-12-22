@@ -54,6 +54,14 @@ elif segundo_argumento == "resetear":
     # sudo docker rmi $(sudo docker images -q)
     exit(0)
 
+
+elif segundo_argumento == "image":
+    chdir('productPage_mono')
+    call(["python3","control_docker.py"])      
+    exit(0)
+
+
+
 varibaleGroup =  environ.get('GRUPO_NUMERO')
 
 # Configurar copiar los files necesario para hacer la imagen de docker file
@@ -61,7 +69,6 @@ varibaleGroup =  environ.get('GRUPO_NUMERO')
 
 
 # Hacer que el script de docker/control_docker.py se ejecute dentro del directorio docker, no desde donde me encuentro ahora
-chdir('docker-compose/productPage_mono')
-call(["python3","control_docker.py"])  
+
 
 call(["sudo","docker","run","-d","--name","productpage:mono","-p","9080:9080", varibaleGroup + "/productpage:mono" ]) 
