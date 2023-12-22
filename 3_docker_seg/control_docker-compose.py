@@ -40,9 +40,10 @@ if segundo_argumento == "images":
     call(["python3","images/details/control_docker.py","create"])
     call(["python3","images/productPage_seg/control_docker.py","create"])
     call(["python3","images/ratings/control_docker.py","create"])
-    call(["python3","images/reviews/control_docker.py","create"])
     exit(0)
 
+if segundo_argumento == "reviews":
+    call(["python3","images/reviews/control_docker.py","create"])
 
 
 if segundo_argumento == "resetear_todo":
