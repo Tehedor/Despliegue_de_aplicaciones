@@ -51,8 +51,9 @@ python3 script_docker.py
 cd 3_docker_seg
 ```
 ```
-python3 control_coker-compose.py images
+python3 control_docker-compose.py images
 
+```
 ```
 cd images/reviews/reviews
 ```
