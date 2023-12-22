@@ -58,16 +58,16 @@ python3 control_docker-compose.py images
 cd images/reviews/reviews
 ```
 ```
-docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
+sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
 ```
 
 ```
-cd ../../...
+cd ../../..
 ```
 
 Para crear las imagenes que va a utilizar el docker-compose
 ```
-python3 control_coker-compose.py reviews
+python3 control_docker-compose.py reviews
 ```
 
 Para ejecutar el docker-compose

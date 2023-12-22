@@ -44,7 +44,7 @@ if segundo_argumento == "images":
 
 if segundo_argumento == "reviews":
     call(["python3","images/reviews/control_docker.py","create"])
-
+    exit(0)
 
 if segundo_argumento == "resetear_todo":
 
