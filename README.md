@@ -51,6 +51,9 @@ python3 script_docker.py
 cd 3_docker_seg
 ```
 ```
+python3 control_coker-compose.py images
+
+```
 cd images/reviews/reviews
 ```
 ```
@@ -63,7 +66,7 @@ cd ../../...
 
 Para crear las imagenes que va a utilizar el docker-compose
 ```
-python3 control_coker-compose.py images
+python3 control_coker-compose.py reviews
 ```
 
 Para ejecutar el docker-compose
