@@ -12,17 +12,17 @@ if segundo_argumento == "add_repo":
     exit(0)
 
 if segundo_argumento == "eliminar_todo":
-    call(["helm", "uninstall", "helmDetails"])
-    call(["helm", "uninstall", "helmProductpage"])
-    call(["helm", "uninstall", "helmRatings"])
-    call(["helm", "uninstall", "helmReviews"])
+    call(["helm", "uninstall", "details"])
+    call(["helm", "uninstall", "productpage"])
+    call(["helm", "uninstall", "ratings"])
+    call(["helm", "uninstall", "reviews"])
 
 
     exit(0)
 
 
 
-call(["helm", "install" , "helmDetails", "stehedor/details"])
-call(["helm", "install" , "helmProductpage", "stehedor/productpage"])
-call(["helm", "install" , "helmRatings", "stehedor/ratings"])
-call(["helm", "install" , "helmReviews", "stehedor/reviews"])
+call(["helm", "install" , "details", "stehedor/details"])
+call(["helm", "install" , "productpage", "stehedor/productpage"])
+call(["helm", "install" , "ratings", "stehedor/ratings"])
+call(["helm", "install" , "reviews", "stehedor/reviews"])
