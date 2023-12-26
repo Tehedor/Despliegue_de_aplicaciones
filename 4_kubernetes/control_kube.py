@@ -8,7 +8,10 @@ if not len(sys.argv) < 2:
 
 if segundo_argumento == "elminar_pods":
     call(["kubectl", "stop", "pods", "--all"])
-    call(["kubectl", "delete", "pods", "--all"])
+
+
+    # call(["kubectl", "stop", "pods", "--all"])
+    # call(["kubectl", "delete", "pods", "--all"])
     exit(0)
 
 # Maquina pesada
