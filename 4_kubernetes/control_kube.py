@@ -6,9 +6,9 @@ segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
 
-if segundo_argumento == "elminar_todo":
+if segundo_argumento == "eliminar_todo":
     call(["kubectl", "delete", "all", "--all"])
-    
+
     # call(["kubectl", "delete", "deployment", "--all"])
     # call(["kubectl", "delete", "services", "--all"])
 
