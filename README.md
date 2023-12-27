@@ -29,7 +29,12 @@ python3 script_m_pesada.py configurar
 python3 script_m_pesada.py 
 ```
 
+> **Otros comandos** 
 
+help
+```
+python3 script_docker.py -h
+```
 
 ## 2. Despliegue de una aplicación monolítica usando docker (2 puntos).
 
@@ -38,12 +43,26 @@ cd 2_docker_mono
 ```
 1. Crear la imagen
 ```
-python3 script_docker.py image
+python3 script_docker.py imagen
 ```
 
 2. Arrancar el contendor
 ```
 python3 script_docker.py
+```
+
+> **Otros comandos**
+Eliminar los contenedores y images
+```
+python3 script_docker.py eliminar_todo
+```
+Eliminar los contenedores
+```
+python3 script_docker.py eliminar_contenedores
+```
+help
+```
+python3 script_docker.py -h
 ```
 
 ## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
@@ -93,17 +112,21 @@ Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 ```
 python3 control_docker-compose.py 
 ```
-+ Otros comandos
+
+> **Otros comandos**
 
 Eliminar contenedores
 ```
 python3 control_docker-compose.py eliminar_contenedores
 ```
-Eliminar todo
+Eliminar contenedores y volumes
 ```
 python3 control_docker-compose.py eliminar_todo
 ```
-
+help
+```
+python3 control_docker-compose.py -h
+```
 
 ## 3.5 Opcional. Docker Compose con las imagenes en la nube
 
@@ -133,15 +156,19 @@ Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 python3 control_docker-compose.py 
 ```
 
-+ Otros comandos
+> **Otros comandos**
 
 Eliminar contenedores
 ```
 python3 control_docker-compose.py eliminar_contenedores
 ```
-Eliminar todo
+Eliminar contenedores y volumenes
 ```
 python3 control_docker-compose.py eliminar_todo
+```
+help
+```
+python3 control_docker-compose.py -h
 ```
 
 
@@ -153,9 +180,14 @@ cd 4_kubernetes
 ```
 python3 control_kube.py
 ```
-+ Elimnar todo
+> **Otros comandos**
+Eliminar deployments y services
 ```
 python3 control_kube.py eliminar_todo
+```
+help
+```
+python3 control_kube.py -h
 ```
 
 
@@ -171,9 +203,14 @@ python3 control_chart.py add_repo
 ```
 python3 control_chart.py
 ```
-+ Eliminar todo 
+> **Otros comandos** 
+Eliminar deployments y services
 ```
 python3 control_chart.py eliminar_todo
+```
+help
+```
+python3 control_chart.py -h
 ```
 
 > **Nota:** Charts en el repositorio: https://github.com/Tehedor/helmcharts.git

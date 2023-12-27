@@ -8,53 +8,62 @@ segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
 
+################  Help  ################
+if segundo_argumento == "-h" or segundo_argumento == "--help":
+    print("""
+        ((( Ojo ))) 
+            Variable de entorno: GRUPO_NUMERO
+            e.g -> export GRUPO_NUMERO=09
+            Variable de entorno: SERVICE_VERSION
+            e.g -> export SERVICE_VERSION=v1
 
-if segundo_argumento == "eliminar_contendores":
+    Uso:    control_docker-compose.py [opcion] 
+    opcion:
+        " " (vacío)             -> Iniciar y ejecutar los contenedores
+        eliminar_contendores    -> Eliminar los contenedores
+        eliminar_todo           -> Eliminar los contenedores y los volumes
 
-    # Get the IDs of all containers
-    container_ids = check_output(["sudo", "docker", "ps", "-a", "-q"])
-
-    # Remove all containers
-    if container_ids:
-        for id in container_ids.split():
-            call(["sudo", "docker", "stop", id])
-            call(["sudo", "docker", "rm", id])
-
+    Cambiar version de los servicios:
+        export SERVICE_VERSION=v1
+        export SERVICE_VERSION=v2
+        export SERVICE_VERSION=v3
+    
+    """)
     exit(0)
 
 
+
+# ######################################################################################################################
+# Elimanar contenedores 
+# ######################################################################################################################
+if segundo_argumento == "eliminar_contendores":
+    call(["sudo","docker-compose","down"])
+    exit(0)
+
+
+# ######################################################################################################################
+# Elimnar contenedores y volumes
+# ######################################################################################################################
 if segundo_argumento == "eliminar_todo":
-
-    # Get the IDs of all containers
-    container_ids = check_output(["sudo", "docker", "ps", "-a", "-q"])
-
-    # Remove all containers
-    if container_ids:
-        for id in container_ids.split():
-            call(["sudo", "docker", "stop", id])
-            call(["sudo", "docker", "rm", id])
-
-    images_ids = check_output(["sudo", "docker", "images", "-q"])
-
-    # Remove all images
-    if images_ids:
-        for id in images_ids.split():
-            call(["sudo", "docker", "rmi","-f", id])
-
-    # Remove all volumes
-
-    images_names = check_output(["sudo", "docker", "volume", "ls","-q"])
-
-    # Remove all containers
-    if images_ids:
+    call(["sudo","docker-compose","down"])
+    if volumes:
         for id in images_names.split():
             call(["sudo", "docker", "volume","rm", id])
-
     exit(0)
 
-
+# ######################################################################################################################
+# Crear variables de entorno para docker-compose
+# ######################################################################################################################
 call(["python3","env.py"])
 
+# ######################################################################################################################
+# Inicia y ejecuta los contenedores
+# ######################################################################################################################
 call(["sudo","docker-compose","up","-d"])
 
-print("export SERVICE_VERSION=" + environ.get('SERVICE_VERSION'))
+
+# Mostar versions de los servicios y las posibles convinaciones que hay
+print("#### SERVICE_VERSION=" + environ.get('SERVICE_VERSION' + " ####\n"))
+print("export SERVICE_VERSION=v1\n")
+print("export SERVICE_VERSION=v2\n")
+print("export SERVICE_VERSION=v3\n")
