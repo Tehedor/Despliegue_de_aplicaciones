@@ -8,8 +8,6 @@ if not path.exists("./productPage_mono/productpage"):
     call(["cp","-r","../practica_creativa2/bookinfo/src/productpage","./productPage_mono/"])     
 
 
-
-
 segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
@@ -46,12 +44,6 @@ elif segundo_argumento == "resetear":
 
     images_ids = check_output(["sudo", "docker", "images", "-q"])
 
-
-    # call(["sudo docker rm $(sudo docker ps -a -q)"])
-    #  ponme este comando con call para que funcione: sudo docker rm $(sudo docker ps -a -q)
-    # call(["sudo docker rm $(sudo docker ps -a -q)"])
-    # call(["sudo docker rmi $(sudo docker images -q)"])
-    # sudo docker rmi $(sudo docker images -q)
     exit(0)
 
 
@@ -69,6 +61,5 @@ varibaleGroup =  environ.get('GRUPO_NUMERO')
 
 
 # Hacer que el script de docker/control_docker.py se ejecute dentro del directorio docker, no desde donde me encuentro ahora
-
 
 call(["sudo","docker","run","-d","--name","productpage-mono","-p","9080:9080", varibaleGroup + "/productpage:mono" ]) 

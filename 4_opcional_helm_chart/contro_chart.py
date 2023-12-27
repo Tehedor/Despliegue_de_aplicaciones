@@ -1,6 +1,5 @@
 from subprocess import call
 from os import sys
-# helm repo add stehedor https://tehedor.github.io/helmcharts/
 
 segundo_argumento = ""
 
@@ -16,11 +15,7 @@ if segundo_argumento == "eliminar_todo":
     call(["helm", "uninstall", "productpage"])
     call(["helm", "uninstall", "ratings"])
     call(["helm", "uninstall", "reviews"])
-
-
     exit(0)
-
-
 
 call(["helm", "install" , "details", "stehedor/details"])
 call(["helm", "install" , "productpage", "stehedor/productpage"])

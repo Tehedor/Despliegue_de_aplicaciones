@@ -13,7 +13,6 @@ if not serviceVersion:
     print("No se ha definido la variable de entorno SERVICE_VERSION")
     sys.exit(1)
 
-
 if not path.exists("./practica_creativa2"):
     # Instalar y actualizar todo lo necesario para que funcione la practica
     call(["sudo","apt-get","update"])
@@ -26,20 +25,3 @@ if not path.exists("./practica_creativa2"):
     call(["git","clone","https://github.com/CDPS-ETSIT/practica_creativa2.git"])
     call(["python3","config/config_requirements.py"])
     call(["python3","config/config_page.py"])
-    # # call(["pip3","install","-r","./practica_creativa2/bookinfo/src/productpage/requirements.txt"])
-
-
-    # 1_mv_pesada
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada/"])
-
-    # 2_docker_mono
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./2_docker_mono/productPage_mono/"])
-
-    # 3_docker_seg
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/details","./3_docker_seg/images/details/"])
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./3_docker_seg/images/productPage_seg/"])
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/ratings","./3_docker_seg/images/ratings/"])
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/reviews","./3_docker_seg/images/reviews/"])
-    # call(["cp","-r","./practica_creativa2/bookinfo/src/productpage","./1_mv_pesada"])
-
-

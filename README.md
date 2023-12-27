@@ -73,7 +73,7 @@ python3 control_docker-compose.py reviews
 
 4. Para ejecutar el docker-compose
 ```
-python3 control_coker-compose.py 
+python3 control_docker-compose.py 
 ```
 
 + Cambiar de versiones de reviews
@@ -91,17 +91,17 @@ export SERVICE_VERSION=v3
 ```
 Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 ```
-python3 control_coker-compose.py 
+python3 control_docker-compose.py 
 ```
 + Otros comandos
 
 Eliminar contenedores
 ```
-python3 control_coker-compose.py eliminar_contenedores
+python3 control_docker-compose.py eliminar_contenedores
 ```
 Eliminar todo
 ```
-python3 control_coker-compose.py eliminar_todo
+python3 control_docker-compose.py eliminar_todo
 ```
 
 
@@ -130,18 +130,18 @@ export SERVICE_VERSION=v3
 ```
 Después de cambiar la varible de entorno deberemos de ejecutar de nuevo
 ```
-python3 control_coker-compose.py 
+python3 control_docker-compose.py 
 ```
 
 + Otros comandos
 
 Eliminar contenedores
 ```
-python3 control_coker-compose.py eliminar_contenedores
+python3 control_docker-compose.py eliminar_contenedores
 ```
 Eliminar todo
 ```
-python3 control_coker-compose.py eliminar_todo
+python3 control_docker-compose.py eliminar_todo
 ```
 
 
@@ -163,9 +163,18 @@ python3 control_kube.py eliminar_todo
 ```
 cd 4.5_helm_chart
 ```
-1. Arrancar los charts 
+1. Añadir repositorio de charts
+```
+python3 control_chart.py add_repo
+```
+2. Arrancar los charts 
 ```
 python3 control_chart.py
 ```
++ Eliminar todo 
+```
+python3 control_chart.py eliminar_todo
+```
+
 > **Nota:** Charts en el repositorio: https://github.com/Tehedor/helmcharts.git
 

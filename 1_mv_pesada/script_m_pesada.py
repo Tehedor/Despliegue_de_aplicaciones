@@ -10,7 +10,6 @@ segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
 
-
 chdir("productpage")
 
 if segundo_argumento == "configurar":
@@ -18,4 +17,3 @@ if segundo_argumento == "configurar":
     sys.exit(0)
     
 call(["python3","productpage_monolith.py","9080"])
-
