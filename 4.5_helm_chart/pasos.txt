@@ -1,4 +1,4 @@
-helm create [nombre]
+ helm create [nombre]
 
 helm lint 
 -> Para ver si esta todo bien
@@ -7,7 +7,7 @@ helm install --dry-run debug .
 
 helm package .
 
-
+helm repo index .
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -16,4 +16,7 @@ helm package .
 helm search repo stehedor
 
 helm repo add stehedor https://tehedor.github.io/helmcharts/
+helm repo update stehedor
+
+
  helm search repo

@@ -149,13 +149,23 @@ python3 control_coker-compose.py eliminar_todo
 ```
 cd 4_kubernetes
 ```
-1. Crear los pods
+1. Crear los deployments y services
 ```
 python3 control_kube.py
 ```
-+ Elimnar todos los pods
++ Elimnar todo
 ```
-python3 control_kube.py elminar_pods
+python3 control_kube.py eliminar_todo
 ```
 
+
 ## 4.5 Opcional, Helm Charts
+```
+cd 4.5_helm_chart
+```
+1. Arrancar los charts 
+```
+python3 control_chart.py
+```
+> **Nota:** Charts en el repositorio: https://github.com/Tehedor/helmcharts.git
+
