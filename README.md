@@ -52,6 +52,7 @@ python3 script_docker.py
 ```
 
 > **Otros comandos**
+
 Eliminar los contenedores y images
 ```
 python3 script_docker.py eliminar_todo
@@ -171,6 +172,7 @@ help
 python3 control_docker-compose.py -h
 ```
 
+> **Nota:** Imagenes en https://hub.docker.com/u/stehedor
 
 ## 4. Despliegue de una aplicación basada en microservicios utilizando Kubernetes (4 puntos)
 ```
@@ -181,6 +183,7 @@ cd 4_kubernetes
 python3 control_kube.py
 ```
 > **Otros comandos**
+
 Eliminar deployments y services
 ```
 python3 control_kube.py eliminar_todo
@@ -204,6 +207,7 @@ python3 control_chart.py add_repo
 python3 control_chart.py
 ```
 > **Otros comandos** 
+
 Eliminar deployments y services
 ```
 python3 control_chart.py eliminar_todo
