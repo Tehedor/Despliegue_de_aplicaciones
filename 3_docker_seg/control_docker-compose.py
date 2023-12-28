@@ -5,17 +5,8 @@ import getpass
 
 
 # ######################################################################################################################
-# Añadir files necesario para el funcionamiento de las aplicaciones
+# Añadir files necesario para el reviews que es especialito
 # ######################################################################################################################
-if not path.exists("./images/details/details"):
-    call(["cp","-r","../practica_creativa2/bookinfo/src/details","./images/details/"])
-
-if not path.exists("./images/productPage_seg/productpage"):
-    call(["cp","-r","../practica_creativa2/bookinfo/src/productpage","./images/productPage_seg/"])
-    
-if not path.exists("./images/ratings/ratings"):
-    call(["cp","-r","../practica_creativa2/bookinfo/src/ratings","./images/ratings/"])
-
 if not path.exists("./images/details/reviews"):
     call(["cp","-r","../practica_creativa2/bookinfo/src/reviews","./images/reviews/"])
 
