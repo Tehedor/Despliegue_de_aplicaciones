@@ -13,8 +13,11 @@ if segundo_argumento == "create":
 
 varibaleGroup =  environ.get('GRUPO_NUMERO')
 
-call(["cp","-r","../../practica_creativa2/bookinfo/src/productpage","."])
 
+
+# Copia la configuración inicial de productpage
+if not path.exists("./productpage"):
+    call(["cp","-r","../../practica_creativa2/bookinfo/src/productpage","."])     
 
 call(["sudo","docker","build","-t",varibaleGroup + "/productpage:mono" ,"."])
    
