@@ -3,6 +3,10 @@ from subprocess import call,run
 import os
 import getpass
 
+# Añadir files necesarios
+if not path.exists("./details"):
+    call(["cp","-r","../../practica_creativa2/bookinfo/src/details","./"])
+
 segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
