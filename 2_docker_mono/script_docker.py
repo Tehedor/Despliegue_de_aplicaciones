@@ -2,17 +2,9 @@ from os import environ,path,sys,chdir
 from subprocess import call,run,check_output
 import os
 
-
-# Copia la configuración inicial de productpage
-if not path.exists("./productPage_mono/productpage"):
-    call(["cp","-r","../practica_creativa2/bookinfo/src/productpage","./productPage_mono/"])     
-
-
 segundo_argumento = ""
 if not len(sys.argv) < 2:
     segundo_argumento = sys.argv[1]
-
-
 
 ################  Help  ################
 if segundo_argumento == "-h" or segundo_argumento == "--help":
