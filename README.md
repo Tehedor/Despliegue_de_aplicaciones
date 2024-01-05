@@ -43,7 +43,7 @@ cd 2_docker_mono
 ```
 1. Crear la imagen
 ```
-python3 script_docker.py imagen
+python3 script_docker.py image
 ```
 
 2. Arrancar el contendor
