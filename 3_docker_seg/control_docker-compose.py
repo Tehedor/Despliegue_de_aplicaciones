@@ -94,7 +94,7 @@ call(["sudo","docker-compose","up","-d"])
 
 
 # Mostar versions de los servicios y las posibles convinaciones que hay
-print("#### SERVICE_VERSION=" + environ.get('SERVICE_VERSION' + " ####\n"))
+print("#### SERVICE_VERSION=" + environ.get('SERVICE_VERSION')+ " ####\n")
 print("export SERVICE_VERSION=v1\n")
 print("export SERVICE_VERSION=v2\n")
 print("export SERVICE_VERSION=v3\n")
