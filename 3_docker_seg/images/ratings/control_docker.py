@@ -5,7 +5,7 @@ import getpass
 
 # Añadir files necesarios
 if not path.exists("./ratings"):
-    call(["cp","-r","../../practica_creativa2/bookinfo/src/ratings","./"])
+    call(["cp","-r","../../../practica_creativa2/bookinfo/src/ratings","./"])
 
 segundo_argumento = ""
 if not len(sys.argv) < 2:
@@ -15,10 +15,8 @@ if not len(sys.argv) < 2:
 if segundo_argumento == "create":
     chdir('images/ratings')
 
-varibaleGroup =  str(environ.get('GRUPO_NUMERO')).lower()
+varibaleGroup =  str(environ.get('GRUPO_NUMERO'))
 # varibaleGroup =  environ.get('GRUPO_NUMERO')
-
-call(["cp","-r","../../practica_creativa2/bookinfo/src/ratings","."])
 
 # docker build -t 09/productpage
 call(["sudo","docker","build","-t",varibaleGroup  + "/ratings","."])
