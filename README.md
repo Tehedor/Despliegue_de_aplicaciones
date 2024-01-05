@@ -132,7 +132,7 @@ python3 control_docker-compose.py -h
 ## 3.5 Opcional. Docker Compose con las imagenes en la nube
 
 ```
-cd 3.5_docker_nube
+cd 3_opcional_docker_nube
 ```
 1. Ejecutaremos directamente el docker-compose, ya que las imagenes sen encuentran en la nube
 ```
