@@ -136,7 +136,7 @@ cd 3_opcional_docker_nube
 ```
 1. Ejecutaremos directamente el docker-compose, ya que las imagenes sen encuentran en la nube
 ```
-python3 control_coker-compose.py 
+python3 control_docker-compose.py
 ```
 
 + Cambiar de versiones de reviews
