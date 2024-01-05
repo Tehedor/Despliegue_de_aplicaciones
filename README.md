@@ -196,7 +196,7 @@ python3 control_kube.py -h
 
 ## 4.5 Opcional, Helm Charts
 ```
-cd 4.5_helm_chart
+cd 4_opcional_helm_chart
 ```
 1. Añadir repositorio de charts
 ```
