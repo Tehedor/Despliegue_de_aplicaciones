@@ -3,9 +3,6 @@ from subprocess import call,run
 import os
 import getpass
 
-# Añadir files necesarios
-if not path.exists("./details"):
-    call(["cp","-r","../../../practica_creativa2/bookinfo/src/details","./"])
 
 segundo_argumento = ""
 if not len(sys.argv) < 2:
@@ -15,6 +12,10 @@ if not len(sys.argv) < 2:
 if segundo_argumento == "create":
     # chdir('docker-compose/details')
     chdir('images/details')
+
+# Añadir files necesarios
+if not path.exists("./details"):
+    call(["cp","-r","../../../practica_creativa2/bookinfo/src/details","./"])
 
 varibaleGroup =  environ.get('GRUPO_NUMERO')
 
