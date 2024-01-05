@@ -50,7 +50,7 @@ if segundo_argumento == "-h" or segundo_argumento == "--help":
 # ######################################################################################################################
 # Elimanar contenedores 
 # ######################################################################################################################
-if segundo_argumento == "eliminar_contendores":
+if segundo_argumento == "eliminar_contenedores":
     call(["sudo","docker-compose","down"])
     exit(0)
 
