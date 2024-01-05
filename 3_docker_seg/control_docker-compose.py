@@ -62,7 +62,7 @@ if segundo_argumento == "eliminar_todo":
     call(["sudo","docker-compose","down"])
     volumes = check_output(["sudo", "docker", "volume", "ls", "-q"])
     if volumes:
-        for id in images_names.split():
+        for id in volumes.split():
             call(["sudo", "docker", "volume","rm", id])
     exit(0)
 
