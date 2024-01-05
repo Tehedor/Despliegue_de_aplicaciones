@@ -1,7 +1,7 @@
 .vscode
 practica_creativa2
-1_mv_pesada/images
-2_docker_mono/productpage
+1_mv_pesada/productpage
+2_docker_mono/productPage_mono/productpage
 3_docker_seg/images/details/details
 3_docker_seg/images/productPage_seg/produtpage
 3_docker_seg/images/ratings/ratings
