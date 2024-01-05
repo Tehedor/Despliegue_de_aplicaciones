@@ -96,6 +96,7 @@ python3 control_docker-compose.py
 ```
 
 + Cambiar de versiones de reviews
+  
 v1
 ```
 export SERVICE_VERSION=v1 
