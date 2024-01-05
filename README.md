@@ -73,7 +73,6 @@ cd 3_docker_seg
 1. Crearemos las imagenes de details, productpage y ratings 
 ```
 python3 control_docker-compose.py images
-
 ```
 2. Crearemos la imagen y el contenedor de gradle manualmente para luego poder crear las imagenes de reviews 
 ```
